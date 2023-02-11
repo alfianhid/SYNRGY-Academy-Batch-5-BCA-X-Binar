@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="my_invoice" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b9eeb864-ea9a-42f6-8a53-73e51ac4e99f">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="user_id" class="java.lang.String"/>
+    <field name="id" class="java.lang.String"/>
+    <field name="buyTicketDate" class="java.lang.String"/>
+    <field name="grandTotal" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="279" y="9" width="291" height="60" uuid="db1f59bc-654c-4b81-a363-37d20697adac"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="26"/>
+                </textElement>
+                <text><![CDATA[TICKET INVOICE]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="107" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="98" splitType="Stretch">
+            <textField>
+                <reportElement x="279" y="20" width="290" height="31" uuid="870a600c-a29f-494f-9a0b-b69896c5954f"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Invoice ID : " + $F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="249" y="60" width="350" height="30" uuid="504b4398-b43a-4301-ab90-8dc2ef150a9a"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Date : " + $F{buyTicketDate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="165" splitType="Stretch">
+            <textField>
+                <reportElement x="303" y="0" width="242" height="37" uuid="ac526c63-2a9f-4a36-b694-b136bc6db4f9"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20"/>
+                </textElement>
+                <textFieldExpression><![CDATA["User ID : " + $F{user_id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="240" y="50" width="369" height="30" uuid="a27745b3-da1e-452c-ad7c-e72d55763586"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="20"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Grand Total : Rp" + $F{grandTotal}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="59" splitType="Stretch">
+            <staticText>
+                <reportElement x="300" y="10" width="248" height="30" uuid="285f703c-7346-4eb2-9fd3-7040fb0e9595"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Thank you for ordering :)]]></text>
+            </staticText>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="72" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
